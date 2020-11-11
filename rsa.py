@@ -3,6 +3,8 @@ import util
 def key_gen():
     p = util.choose_random_prime(10000, 32000)
     q = util.choose_random_prime(10000, 32000)
+    while p == q:
+        q = util.choose_random_prime(10000, 32000)
     n = p * q
     pn = (p - 1) * (q - 1)
     e = util.choose_random_coprime(2, pn - 1, pn) 
