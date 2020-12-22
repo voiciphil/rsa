@@ -1,11 +1,6 @@
 import random
 
 def extended_euclidean_algorithm(x, y):
-    if x < y:
-        tmp = x
-        x = y
-        y = tmp
-    
     if x % y == 0:
         return (0, 1, y)
     
@@ -44,11 +39,6 @@ def is_prime(n):
 
 
 def gcd(x, y):
-    if x < y:
-        tmp = x
-        x = y
-        y = tmp
-    
     if y == 0:
         return x
     
